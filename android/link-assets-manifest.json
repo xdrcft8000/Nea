@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Cuprum-Bold.ttf",
+      "sha1": "b123ad53b2525121f701d41c30d0642ef1dc1918"
+    },
+    {
+      "path": "assets/fonts/Cuprum-BoldItalic.ttf",
+      "sha1": "d48213274d82fe04c1ae6c0e66e6037cd26146ed"
+    },
+    {
+      "path": "assets/fonts/Cuprum-Italic.ttf",
+      "sha1": "2f148ada21c549a37ba836ee2585c643d3c05f8d"
+    },
+    {
+      "path": "assets/fonts/Cuprum-Regular.ttf",
+      "sha1": "075283b3021d515681e3b399e1703e61d84e3850"
+    }
+  ]
+}

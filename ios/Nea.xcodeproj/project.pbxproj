@@ -11,10 +11,33 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		14864619DB9C43619A1B99DC /* Cuprum-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25E45D80C4F547D9A5D1327B /* Cuprum-Italic.ttf */; };
+		4AE9AC7CB2554A8183189541 /* Cuprum-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19C287F366EF494C96B7D590 /* Cuprum-Bold.ttf */; };
+		63C56003143246D4B74B8B6F /* Cuprum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1B9C2B6D2B94499ACF38BC0 /* Cuprum-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9F561D6B15BC4454A6F88344 /* Pods_Nea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D863DE6F42469AFD80A360 /* Pods_Nea.framework */; };
 		D8247C733A9C361FC2ECC932 /* Pods_Nea_NeaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A183C7ADFCE19996F3BCA4F8 /* Pods_Nea_NeaTests.framework */; };
 		EE56110529E704BA00CA5DA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE56110429E704BA00CA5DA6 /* GoogleService-Info.plist */; };
+		EE56112829F53A1000CA5DA6 /* SwiftUIButtonProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56112429F53A1000CA5DA6 /* SwiftUIButtonProxy.swift */; };
+		EE56112929F53A1000CA5DA6 /* SwiftUIButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE56112629F53A1000CA5DA6 /* SwiftUIButtonManager.m */; };
+		EE56112A29F53A1000CA5DA6 /* SwiftUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56112729F53A1000CA5DA6 /* SwiftUIButton.swift */; };
+		EE56112C29F5D62400CA5DA6 /* AuthAndBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56112B29F5D62400CA5DA6 /* AuthAndBlock.swift */; };
+		EE56112E29F5D7FD00CA5DA6 /* AuthAndBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = EE56112D29F5D7FD00CA5DA6 /* AuthAndBlock.m */; };
+		EE56113929F9136C00CA5DA6 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE56113829F9136C00CA5DA6 /* ManagedSettings.framework */; };
+		EE56113C29F9136C00CA5DA6 /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56113B29F9136C00CA5DA6 /* ShieldActionExtension.swift */; };
+		EE56114129F9136C00CA5DA6 /* neaShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EE56113729F9136C00CA5DA6 /* neaShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE56115D29F92FEA00CA5DA6 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE56113829F9136C00CA5DA6 /* ManagedSettings.framework */; };
+		EE56115F29F92FEA00CA5DA6 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE56115E29F92FEA00CA5DA6 /* ManagedSettingsUI.framework */; };
+		EE56116229F92FEA00CA5DA6 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56116129F92FEA00CA5DA6 /* ShieldConfigurationExtension.swift */; };
+		EE56116729F92FEA00CA5DA6 /* shieldConfig.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EE56115C29F92FEA00CA5DA6 /* shieldConfig.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE56117829F942EF00CA5DA6 /* BlockUnblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56117729F942EF00CA5DA6 /* BlockUnblock.swift */; };
+		EE56117D29F943FD00CA5DA6 /* BlockUnblock.m in Sources */ = {isa = PBXBuildFile; fileRef = EE56117C29F943FD00CA5DA6 /* BlockUnblock.m */; };
+		EE56118929F9478D00CA5DA6 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE56114B29F913F800CA5DA6 /* DeviceActivity.framework */; };
+		EE56118C29F9478D00CA5DA6 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56118B29F9478D00CA5DA6 /* DeviceActivityMonitorExtension.swift */; };
+		EE56119129F9478D00CA5DA6 /* MonitorNea.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EE56118829F9478D00CA5DA6 /* MonitorNea.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE56119729F95AC900CA5DA6 /* BlockUnblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56117729F942EF00CA5DA6 /* BlockUnblock.swift */; };
+		EE56119829F95D3200CA5DA6 /* BlockUnblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56117729F942EF00CA5DA6 /* BlockUnblock.swift */; };
+		F9AA3D24BEDB43C288B2F4E4 /* Cuprum-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E12CE0E5646E49BCB2BD6 /* Cuprum-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +48,44 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Nea;
 		};
+		EE56113F29F9136C00CA5DA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE56113629F9136C00CA5DA6;
+			remoteInfo = neaShield;
+		};
+		EE56116529F92FEA00CA5DA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE56115B29F92FEA00CA5DA6;
+			remoteInfo = shieldConfig;
+		};
+		EE56118F29F9478D00CA5DA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE56118729F9478D00CA5DA6;
+			remoteInfo = MonitorNea;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE56114529F9136D00CA5DA6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EE56116729F92FEA00CA5DA6 /* shieldConfig.appex in Embed Foundation Extensions */,
+				EE56114129F9136C00CA5DA6 /* neaShield.appex in Embed Foundation Extensions */,
+				EE56119129F9478D00CA5DA6 /* MonitorNea.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* NeaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,16 +97,44 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Nea/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nea/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Nea/main.m; sourceTree = "<group>"; };
+		19C287F366EF494C96B7D590 /* Cuprum-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Cuprum-Bold.ttf"; path = "../assets/fonts/Cuprum-Bold.ttf"; sourceTree = "<group>"; };
+		25E45D80C4F547D9A5D1327B /* Cuprum-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Cuprum-Italic.ttf"; path = "../assets/fonts/Cuprum-Italic.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Nea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nea.debug.xcconfig"; path = "Target Support Files/Pods-Nea/Pods-Nea.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Nea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nea.release.xcconfig"; path = "Target Support Files/Pods-Nea/Pods-Nea.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Nea-NeaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nea-NeaTests.debug.xcconfig"; path = "Target Support Files/Pods-Nea-NeaTests/Pods-Nea-NeaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A0E12CE0E5646E49BCB2BD6 /* Cuprum-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Cuprum-BoldItalic.ttf"; path = "../assets/fonts/Cuprum-BoldItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Nea/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D863DE6F42469AFD80A360 /* Pods_Nea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Nea-NeaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nea-NeaTests.release.xcconfig"; path = "Target Support Files/Pods-Nea-NeaTests/Pods-Nea-NeaTests.release.xcconfig"; sourceTree = "<group>"; };
 		A183C7ADFCE19996F3BCA4F8 /* Pods_Nea_NeaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nea_NeaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B9C2B6D2B94499ACF38BC0 /* Cuprum-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Cuprum-Regular.ttf"; path = "../assets/fonts/Cuprum-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EE56110429E704BA00CA5DA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE56110629E706EE00CA5DA6 /* Nea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Nea.entitlements; path = Nea/Nea.entitlements; sourceTree = "<group>"; };
+		EE56112429F53A1000CA5DA6 /* SwiftUIButtonProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIButtonProxy.swift; sourceTree = "<group>"; };
+		EE56112529F53A1000CA5DA6 /* Nea-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Nea-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE56112629F53A1000CA5DA6 /* SwiftUIButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftUIButtonManager.m; sourceTree = "<group>"; };
+		EE56112729F53A1000CA5DA6 /* SwiftUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIButton.swift; sourceTree = "<group>"; };
+		EE56112B29F5D62400CA5DA6 /* AuthAndBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAndBlock.swift; sourceTree = "<group>"; };
+		EE56112D29F5D7FD00CA5DA6 /* AuthAndBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthAndBlock.m; sourceTree = "<group>"; };
+		EE56113729F9136C00CA5DA6 /* neaShield.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = neaShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE56113829F9136C00CA5DA6 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		EE56113B29F9136C00CA5DA6 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
+		EE56113D29F9136C00CA5DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE56113E29F9136C00CA5DA6 /* neaShield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = neaShield.entitlements; sourceTree = "<group>"; };
+		EE56114B29F913F800CA5DA6 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		EE56115C29F92FEA00CA5DA6 /* shieldConfig.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = shieldConfig.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE56115E29F92FEA00CA5DA6 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
+		EE56116129F92FEA00CA5DA6 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		EE56116329F92FEA00CA5DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE56116429F92FEA00CA5DA6 /* shieldConfig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shieldConfig.entitlements; sourceTree = "<group>"; };
+		EE56117729F942EF00CA5DA6 /* BlockUnblock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUnblock.swift; sourceTree = "<group>"; };
+		EE56117C29F943FD00CA5DA6 /* BlockUnblock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockUnblock.m; sourceTree = "<group>"; };
+		EE56118829F9478D00CA5DA6 /* MonitorNea.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonitorNea.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE56118B29F9478D00CA5DA6 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		EE56118D29F9478D00CA5DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE56118E29F9478D00CA5DA6 /* MonitorNea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonitorNea.entitlements; sourceTree = "<group>"; };
+		EE56119629F9596000CA5DA6 /* MonitorNeaDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonitorNeaDebug.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +151,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F561D6B15BC4454A6F88344 /* Pods_Nea.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56113429F9136C00CA5DA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE56113929F9136C00CA5DA6 /* ManagedSettings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56115929F92FEA00CA5DA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE56115D29F92FEA00CA5DA6 /* ManagedSettings.framework in Frameworks */,
+				EE56115F29F92FEA00CA5DA6 /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56118529F9478D00CA5DA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE56118929F9478D00CA5DA6 /* DeviceActivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,11 +207,30 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				EE56112529F53A1000CA5DA6 /* Nea-Bridging-Header.h */,
+				EE56112B29F5D62400CA5DA6 /* AuthAndBlock.swift */,
+				EE56112D29F5D7FD00CA5DA6 /* AuthAndBlock.m */,
+				EE56112729F53A1000CA5DA6 /* SwiftUIButton.swift */,
+				EE56117729F942EF00CA5DA6 /* BlockUnblock.swift */,
+				EE56117C29F943FD00CA5DA6 /* BlockUnblock.m */,
+				EE56112629F53A1000CA5DA6 /* SwiftUIButtonManager.m */,
+				EE56112429F53A1000CA5DA6 /* SwiftUIButtonProxy.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = Nea;
+			sourceTree = "<group>";
+		};
+		26AF63B7D82C4F82991EAE1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19C287F366EF494C96B7D590 /* Cuprum-Bold.ttf */,
+				7A0E12CE0E5646E49BCB2BD6 /* Cuprum-BoldItalic.ttf */,
+				25E45D80C4F547D9A5D1327B /* Cuprum-Italic.ttf */,
+				A1B9C2B6D2B94499ACF38BC0 /* Cuprum-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -107,6 +239,9 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				84D863DE6F42469AFD80A360 /* Pods_Nea.framework */,
 				A183C7ADFCE19996F3BCA4F8 /* Pods_Nea_NeaTests.framework */,
+				EE56113829F9136C00CA5DA6 /* ManagedSettings.framework */,
+				EE56114B29F913F800CA5DA6 /* DeviceActivity.framework */,
+				EE56115E29F92FEA00CA5DA6 /* ManagedSettingsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,9 +259,13 @@
 				13B07FAE1A68108700A75B9A /* Nea */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* NeaTests */,
+				EE56113A29F9136C00CA5DA6 /* neaShield */,
+				EE56116029F92FEA00CA5DA6 /* shieldConfig */,
+				EE56118A29F9478D00CA5DA6 /* MonitorNea */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				26AF63B7D82C4F82991EAE1C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,6 +277,9 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Nea.app */,
 				00E356EE1AD99517003FC87E /* NeaTests.xctest */,
+				EE56113729F9136C00CA5DA6 /* neaShield.appex */,
+				EE56115C29F92FEA00CA5DA6 /* shieldConfig.appex */,
+				EE56118829F9478D00CA5DA6 /* MonitorNea.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +293,37 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-Nea-NeaTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE56113A29F9136C00CA5DA6 /* neaShield */ = {
+			isa = PBXGroup;
+			children = (
+				EE56113B29F9136C00CA5DA6 /* ShieldActionExtension.swift */,
+				EE56113D29F9136C00CA5DA6 /* Info.plist */,
+				EE56113E29F9136C00CA5DA6 /* neaShield.entitlements */,
+			);
+			path = neaShield;
+			sourceTree = "<group>";
+		};
+		EE56116029F92FEA00CA5DA6 /* shieldConfig */ = {
+			isa = PBXGroup;
+			children = (
+				EE56116129F92FEA00CA5DA6 /* ShieldConfigurationExtension.swift */,
+				EE56116329F92FEA00CA5DA6 /* Info.plist */,
+				EE56116429F92FEA00CA5DA6 /* shieldConfig.entitlements */,
+			);
+			path = shieldConfig;
+			sourceTree = "<group>";
+		};
+		EE56118A29F9478D00CA5DA6 /* MonitorNea */ = {
+			isa = PBXGroup;
+			children = (
+				EE56119629F9596000CA5DA6 /* MonitorNeaDebug.entitlements */,
+				EE56118B29F9478D00CA5DA6 /* DeviceActivityMonitorExtension.swift */,
+				EE56118D29F9478D00CA5DA6 /* Info.plist */,
+				EE56118E29F9478D00CA5DA6 /* MonitorNea.entitlements */,
+			);
+			path = MonitorNea;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,15 +363,70 @@
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 				EB5CC4B60F4CBA4256AA28AE /* [CP-User] [RNFB] Core Configuration */,
+				EE56114529F9136D00CA5DA6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EE56114029F9136C00CA5DA6 /* PBXTargetDependency */,
+				EE56116629F92FEA00CA5DA6 /* PBXTargetDependency */,
+				EE56119029F9478D00CA5DA6 /* PBXTargetDependency */,
 			);
 			name = Nea;
 			productName = Nea;
 			productReference = 13B07F961A680F5B00A75B9A /* Nea.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EE56113629F9136C00CA5DA6 /* neaShield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE56114229F9136D00CA5DA6 /* Build configuration list for PBXNativeTarget "neaShield" */;
+			buildPhases = (
+				EE56113329F9136C00CA5DA6 /* Sources */,
+				EE56113429F9136C00CA5DA6 /* Frameworks */,
+				EE56113529F9136C00CA5DA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = neaShield;
+			productName = neaShield;
+			productReference = EE56113729F9136C00CA5DA6 /* neaShield.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		EE56115B29F92FEA00CA5DA6 /* shieldConfig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE56116829F92FEA00CA5DA6 /* Build configuration list for PBXNativeTarget "shieldConfig" */;
+			buildPhases = (
+				EE56115829F92FEA00CA5DA6 /* Sources */,
+				EE56115929F92FEA00CA5DA6 /* Frameworks */,
+				EE56115A29F92FEA00CA5DA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shieldConfig;
+			productName = shieldConfig;
+			productReference = EE56115C29F92FEA00CA5DA6 /* shieldConfig.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		EE56118729F9478D00CA5DA6 /* MonitorNea */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE56119229F9478D00CA5DA6 /* Build configuration list for PBXNativeTarget "MonitorNea" */;
+			buildPhases = (
+				EE56118429F9478D00CA5DA6 /* Sources */,
+				EE56118529F9478D00CA5DA6 /* Frameworks */,
+				EE56118629F9478D00CA5DA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonitorNea;
+			productName = MonitorNea;
+			productReference = EE56118829F9478D00CA5DA6 /* MonitorNea.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -206,14 +434,25 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1420;
+					};
+					EE56113629F9136C00CA5DA6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EE56115B29F92FEA00CA5DA6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EE56118729F9478D00CA5DA6 = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
@@ -232,6 +471,9 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* Nea */,
 				00E356ED1AD99517003FC87E /* NeaTests */,
+				EE56113629F9136C00CA5DA6 /* neaShield */,
+				EE56115B29F92FEA00CA5DA6 /* shieldConfig */,
+				EE56118729F9478D00CA5DA6 /* MonitorNea */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +493,31 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				EE56110529E704BA00CA5DA6 /* GoogleService-Info.plist in Resources */,
+				4AE9AC7CB2554A8183189541 /* Cuprum-Bold.ttf in Resources */,
+				F9AA3D24BEDB43C288B2F4E4 /* Cuprum-BoldItalic.ttf in Resources */,
+				14864619DB9C43619A1B99DC /* Cuprum-Italic.ttf in Resources */,
+				63C56003143246D4B74B8B6F /* Cuprum-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56113529F9136C00CA5DA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56115A29F92FEA00CA5DA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56118629F9478D00CA5DA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,8 +699,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE56112A29F53A1000CA5DA6 /* SwiftUIButton.swift in Sources */,
+				EE56117D29F943FD00CA5DA6 /* BlockUnblock.m in Sources */,
+				EE56112E29F5D7FD00CA5DA6 /* AuthAndBlock.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				EE56112C29F5D62400CA5DA6 /* AuthAndBlock.swift in Sources */,
+				EE56112829F53A1000CA5DA6 /* SwiftUIButtonProxy.swift in Sources */,
+				EE56117829F942EF00CA5DA6 /* BlockUnblock.swift in Sources */,
+				EE56112929F53A1000CA5DA6 /* SwiftUIButtonManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56113329F9136C00CA5DA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE56113C29F9136C00CA5DA6 /* ShieldActionExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56115829F92FEA00CA5DA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE56119829F95D3200CA5DA6 /* BlockUnblock.swift in Sources */,
+				EE56116229F92FEA00CA5DA6 /* ShieldConfigurationExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE56118429F9478D00CA5DA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE56119729F95AC900CA5DA6 /* BlockUnblock.swift in Sources */,
+				EE56118C29F9478D00CA5DA6 /* DeviceActivityMonitorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +745,21 @@
 			target = 13B07F861A680F5B00A75B9A /* Nea */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		EE56114029F9136C00CA5DA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE56113629F9136C00CA5DA6 /* neaShield */;
+			targetProxy = EE56113F29F9136C00CA5DA6 /* PBXContainerItemProxy */;
+		};
+		EE56116629F92FEA00CA5DA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE56115B29F92FEA00CA5DA6 /* shieldConfig */;
+			targetProxy = EE56116529F92FEA00CA5DA6 /* PBXContainerItemProxy */;
+		};
+		EE56119029F9478D00CA5DA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE56118729F9478D00CA5DA6 /* MonitorNea */;
+			targetProxy = EE56118F29F9478D00CA5DA6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -452,7 +767,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Nea-NeaTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -471,6 +788,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NeaTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nea.app/Nea";
 			};
 			name = Debug;
@@ -479,7 +799,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Nea-NeaTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = NeaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -495,6 +817,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NeaTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nea.app/Nea";
 			};
 			name = Release;
@@ -503,6 +827,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Nea.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Nea/Nea.entitlements;
@@ -510,6 +835,8 @@
 				DEVELOPMENT_TEAM = W2V286C357;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Nea/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = nea;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,6 +849,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nea.nea;
 				PRODUCT_NAME = Nea;
+				SWIFT_OBJC_BRIDGING_HEADER = "Nea-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -532,12 +860,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Nea.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Nea/Nea.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W2V286C357;
 				INFOPLIST_FILE = Nea/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = nea;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,6 +881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nea.nea;
 				PRODUCT_NAME = Nea;
+				SWIFT_OBJC_BRIDGING_HEADER = "Nea-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -692,6 +1024,240 @@
 			};
 			name = Release;
 		};
+		EE56114329F9136D00CA5DA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = neaShield/neaShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = W2V286C357;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = neaShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = neaShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.neaShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE56114429F9136D00CA5DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = neaShield/neaShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = W2V286C357;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = neaShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = neaShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.neaShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE56116929F92FEA00CA5DA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = shieldConfig/shieldConfig.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = W2V286C357;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = shieldConfig/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = shieldConfig;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.shieldConfig;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE56116A29F92FEA00CA5DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = shieldConfig/shieldConfig.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = W2V286C357;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = shieldConfig/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = shieldConfig;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.shieldConfig;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE56119329F9478D00CA5DA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MonitorNea/MonitorNeaDebug.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = W2V286C357;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonitorNea/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonitorNea;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.MonitorNea;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE56119429F9478D00CA5DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MonitorNea/MonitorNea.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = W2V286C357;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonitorNea/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonitorNea;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.MonitorNea;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -718,6 +1284,33 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE56114229F9136D00CA5DA6 /* Build configuration list for PBXNativeTarget "neaShield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE56114329F9136D00CA5DA6 /* Debug */,
+				EE56114429F9136D00CA5DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE56116829F92FEA00CA5DA6 /* Build configuration list for PBXNativeTarget "shieldConfig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE56116929F92FEA00CA5DA6 /* Debug */,
+				EE56116A29F92FEA00CA5DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE56119229F9478D00CA5DA6 /* Build configuration list for PBXNativeTarget "MonitorNea" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE56119329F9478D00CA5DA6 /* Debug */,
+				EE56119429F9478D00CA5DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

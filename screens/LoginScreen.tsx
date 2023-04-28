@@ -1,12 +1,14 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
-import {FirebaseDatabaseTypes, firebase} from '@react-native-firebase/database';
+import {firebase} from '@react-native-firebase/database';
 // eslint-disable-next-line prettier/prettier
-import {GoogleSignin, User, GoogleSigninButton} from '@react-native-google-signin/google-signin';
+import {GoogleSignin, GoogleSigninButton} from '@react-native-google-signin/google-signin';
 // eslint-disable-next-line prettier/prettier
 import {AppleButton,appleAuth} from '@invertase/react-native-apple-authentication';
-
+import {storeAsyncData} from '../storageFunctions';
+// eslint-disable-next-line prettier/prettier
+import {AppleSocialButton,GoogleSocialButton} from 'react-native-social-buttons';
 
 async function onGoogleButtonPress() {
   // Check if your device supports Google Play
@@ -18,6 +20,7 @@ async function onGoogleButtonPress() {
   const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
   // Sign-in the user with the credential
+
   return (await auth().signInWithCredential(googleCredential)).user;
 }
 
@@ -28,16 +31,6 @@ async function onAppleButtonPress() {
     // Note: it appears putting FULL_NAME first is important, see issue #293
     requestedScopes: [appleAuth.Scope.FULL_NAME, appleAuth.Scope.EMAIL],
   });
-
-  // get current authentication state for user
-  // /!\ This method must be tested on a real device. On the iOS simulator it always throws an error.
-  // const credentialState = await appleAuth.getCredentialStateForUser(
-  //   appleAuthRequestResponse.user,
-  // );
-
-  // // use credentialState response to ensure the user is authenticated
-  // if (credentialState === appleAuth.State.AUTHORIZED) {
-  //   // user is authenticated
 
   //METHODS FROM FBRN:
   // Ensure Apple returned a user identityToken
@@ -55,67 +48,87 @@ async function onAppleButtonPress() {
   // Sign the user in with the credential
   return (await auth().signInWithCredential(appleCredential)).user;
 }
+const db = firebase
+  .app()
+  .database(
+    'https://nea2-4c301-default-rtdb.europe-west1.firebasedatabase.app/',
+  );
 
-function saveUser(
-  user: FirebaseAuthTypes.User,
-  userRef: FirebaseDatabaseTypes.Reference,
-) {
+function saveUser(user: FirebaseAuthTypes.User, randomGuy: boolean) {
+  const userRef = db.ref('users/' + user.uid);
   userRef.set({
     email: user.email,
     uid: user.uid,
+    randomGuy: randomGuy,
+    created: Math.floor(Date.now() / 1000),
   });
-  console.log('New user saved: Email:' + user.email + ' UID: ' + user.uid);
+  storeAsyncData([['RandomGuy', randomGuy]]);
 }
 
-const LoginScreen = ({navigation}) => {
-  const db = firebase
-    .app()
-    .database(
-      'https://nea2-4c301-default-rtdb.europe-west1.firebasedatabase.app/',
-    );
+function loginHandler(user: FirebaseAuthTypes.User, route: any) {
+  const userRef = db.ref('users/');
+  var randomGuy = false;
+  const uid = user.uid;
+  userRef.once('value').then(snapshot => {
+    if (!snapshot.hasChild(uid)) {
+      if (snapshot.numChildren() % 2 === 0) {
+        randomGuy = true;
+      }
+      saveUser(user, randomGuy);
+    } else {
+      console.log(uid + ' existing user: Logging in');
+      storeAsyncData([
+        ['RandomGuy', snapshot.child(uid).child('randomGuy').val()],
+      ]);
+    }
+    route.params.handleLogin(user);
+  });
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const LoginScreen = ({navigation, route}) => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Login to Nea</Text>
-      <AppleButton
-        buttonStyle={AppleButton.Style.WHITE}
-        buttonType={AppleButton.Type.SIGN_IN}
-        // eslint-disable-next-line react-native/no-inline-styles
-        style={{
-          width: 165, // You must specify a width
-          height: 40, // You must specify a height
-        }}
-        onPress={() => {
-          onAppleButtonPress().then(user => {
-            const userRef = db.ref('users/' + user.uid);
-            userRef.once('value').then(snapshot => {
-              if (!snapshot.exists()) {
-                saveUser(user, userRef);
-              } else {
-                console.log(user.uid + ' already exists.');
-              }
+    // eslint-disable-next-line react-native/no-inline-styles
+    <View style={{flex: 1}}>
+      <View>
+        <Image
+          source={require('../assets/medhiCorner.png')}
+          style={{position: 'absolute', alignItems: 'flex-start', width: 430, height: 470, top:-10, left:-20}}
+        />
+      </View>
+
+      <View style={{ alignItems: 'center', justifyContent:'center', postion:'absolute', top:'35%', left:'25%'}}>
+        <Text style={{fontFamily: 'Cuprum-Bold', fontSize:80}}>nea</Text>
+      </View>
+
+      <View style={{alignItems: 'center', justifyContent:'center', postion:'absolute', top:'60%'}}>
+        <AppleSocialButton
+          buttonStyle={AppleButton.Style.WHITE}
+          buttonType={AppleButton.Type.SIGN_IN}
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{
+            width: 165,
+            height: 40,
+          }}
+          onPress={() => {
+            onAppleButtonPress().then(user => {
+              loginHandler(user, route);
             });
-          });
-        }}
-      />
-      <GoogleSigninButton
-        style={{width: 180, height: 45}}
-        size={GoogleSigninButton.Size.Wide}
-        color={GoogleSigninButton.Color.Light}
-        onPress={() => {
-          onGoogleButtonPress().then(user => {
-            const userRef = db.ref('users/' + user.uid);
-            userRef.once('value').then(snapshot => {
-              if (!snapshot.exists()) {
-                saveUser(user, userRef);
-              } else {
-                console.log(user.uid + ' already exists.');
-              }
+          }}
+        />
+        <GoogleSocialButton
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{width: 180, height: 45}}
+          size={GoogleSigninButton.Size.Wide}
+          color={GoogleSigninButton.Color.Light}
+          onPress={() => {
+            onGoogleButtonPress().then(user => {
+              loginHandler(user, route);
             });
-          });
-        }}
-      />
+          }}
+        />
+      </View>
     </View>
   );
 };
 export default LoginScreen;
-
