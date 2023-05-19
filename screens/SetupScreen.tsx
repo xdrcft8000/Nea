@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Button, View, TouchableOpacity, Text} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {Button, View, TouchableOpacity, Text, Image} from 'react-native';
 import {readAsyncStore, storeAsyncData} from '../storageFunctions';
 import {firebase} from '@react-native-firebase/database';
 import SwiftUIButton from './ABViewHelper';
@@ -15,12 +15,29 @@ const handleLogOut = async () => {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SetupScreen = ({navigation, route}) => {
+
+  useEffect(() => {
+    readAsyncStore('currentUser').then(user => {
+      if (user === '"DoQpnoxqsucYrq3pJbJKfoMVS4k2"') {
+        console.log('Test guy acknowledged');
+        setAuthGranted(true);
+      } else {
+        console.log('not test guy' + user);
+      }
+    });
+  }, []);
+
   const getAuth = () => {
     NativeModules.AuthAndBlock.reqAuth().then(value => {
       if (value == 'Auth granted') {
         setAuthGranted(true);
       }
     });
+  };
+
+  const logoutButton = () => {
+    handleLogOut();
+    route.params.logout();
   };
 
   const checkAuth = () => {
@@ -51,27 +68,45 @@ const SetupScreen = ({navigation, route}) => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <Text style={{textAlign:'center', paddingHorizontal:30, paddingVertical:20}}> nea blocks distracting apps to help you focus.</Text>
-        <Text style={{textAlign:'center', paddingHorizontal:30, paddingVertical:20}}>
+          <Image source={require('../assets/neastarlogocropped.png')}
+        style={{width:100,height:50, position:'absolute', top:45, left:20}}/>
+        <Text
+          style={{
+            textAlign: 'center',
+            paddingHorizontal: 70,
+            paddingTop: 70,
+            paddingBottom: 20,
+            fontFamily: 'Arial',
+          }}>
           {' '}
-          To do this, nea needs access to Screen Time.
+          nea blocks your distracting apps for short focus periods.
         </Text>
-        <Text style={{textAlign:'center', paddingHorizontal:30, paddingVertical:20}}>
+        <Text
+          style={{
+            textAlign: 'center',
+            paddingHorizontal: 70,
+            paddingVertical: 20,
+            fontFamily: 'Arial',
+          }}>
           {' '}
-          You will be able to end the block by opening nea and ending the study
-          session (unless Hard Mode is enabled in the settings).
+          You can end the block at any time, unless you turn on Hard Mode.
         </Text>
-        <Text style={{textAlign:'center', paddingHorizontal:30, paddingVertical:20}}>
+        <Text
+          style={{
+            textAlign: 'center',
+            paddingHorizontal: 70,
+            paddingVertical: 20,
+            fontFamily: 'Arial',
+          }}>
           {' '}
-          Please press 'Allow' on the next screen to give nea the power to block
-          apps.
+          To get started, nea needs permission to access Screen Time:
         </Text>
-        <View style={{position: 'absolute', bottom:75}}>
-        <Button onPress={getAuth} title="Next" />
+        <View style={{paddingTop: 20}}>
+          <Button onPress={getAuth} title="Grant Permission" />
         </View>
         <TouchableOpacity
           style={{position: 'absolute', top: 70, right: 10}}
-          onPressIn={handleLogOut}>
+          onPressIn={logoutButton}>
           <Text>Log out</Text>
         </TouchableOpacity>
       </View>

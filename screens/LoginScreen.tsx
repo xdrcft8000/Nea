@@ -1,5 +1,14 @@
-import React from 'react';
-import {View, Text, Image} from 'react-native';
+import React, {useState, useRef} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  Modal,
+  TextInput,
+  Button,
+} from 'react-native';
+// eslint-disable-next-line prettier/prettier
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import {firebase} from '@react-native-firebase/database';
 // eslint-disable-next-line prettier/prettier
@@ -9,6 +18,7 @@ import {AppleButton,appleAuth} from '@invertase/react-native-apple-authenticatio
 import {storeAsyncData} from '../storageFunctions';
 // eslint-disable-next-line prettier/prettier
 import {AppleSocialButton,GoogleSocialButton} from 'react-native-social-buttons';
+import {BlurView} from '@react-native-community/blur';
 
 async function onGoogleButtonPress() {
   // Check if your device supports Google Play
@@ -48,6 +58,11 @@ async function onAppleButtonPress() {
   // Sign the user in with the credential
   return (await auth().signInWithCredential(appleCredential)).user;
 }
+
+async function onEmailButtonPress(email: string, password: string) {
+  return (await auth().signInWithEmailAndPassword(email, password)).user;
+}
+
 const db = firebase
   .app()
   .database(
@@ -62,7 +77,10 @@ function saveUser(user: FirebaseAuthTypes.User, randomGuy: boolean) {
     randomGuy: randomGuy,
     created: Math.floor(Date.now() / 1000),
   });
-  storeAsyncData([['RandomGuy', randomGuy]]);
+  storeAsyncData([
+    ['currentUser', user.uid],
+    ['RandomGuy', randomGuy],
+  ]);
 }
 
 function loginHandler(user: FirebaseAuthTypes.User, route: any) {
@@ -76,9 +94,9 @@ function loginHandler(user: FirebaseAuthTypes.User, route: any) {
       }
       saveUser(user, randomGuy);
     } else {
-      console.log(uid + ' existing user: Logging in');
       storeAsyncData([
         ['RandomGuy', snapshot.child(uid).child('randomGuy').val()],
+        ['currentUser', uid],
       ]);
     }
     route.params.handleLogin(user);
@@ -87,21 +105,61 @@ function loginHandler(user: FirebaseAuthTypes.User, route: any) {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LoginScreen = ({navigation, route}) => {
+  const [showLogin, setShowLogin] = useState(false);
+
+  const toggleLogin = () => {
+    setShowLogin(!showLogin);
+  };
+
+  const email = useRef('');
+  const password = useRef('');
+
   return (
     // eslint-disable-next-line react-native/no-inline-styles
     <View style={{flex: 1}}>
       <View>
         <Image
           source={require('../assets/medhiCorner.png')}
-          style={{position: 'absolute', alignItems: 'flex-start', width: 430, height: 470, top:-10, left:-20}}
+          style={{
+            position: 'absolute',
+            alignItems: 'flex-start',
+            width: 430,
+            height: 470,
+            top: -10,
+            left: -20,
+          }}
         />
       </View>
 
-      <View style={{ alignItems: 'center', justifyContent:'center', postion:'absolute', top:'35%', left:'25%'}}>
-        <Text style={{fontFamily: 'Cuprum-Bold', fontSize:80}}>nea</Text>
+      <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          top: '35%',
+          left: '30%',
+        }}>
+        <Image
+          source={require('../assets/neastarlogocropped.png')}
+          style={{width: 200, height: 100}}
+        />
+        {/* <Text style={{fontFamily: 'Arial', fontSize: 80}}>nea</Text> */}
+        <Text
+          style={{
+            fontFamily: 'Cuprum-Regular',
+            fontSize: 15,
+            paddingRight: 80,
+            paddingTop: 13,
+          }}>
+          the smart pomodoro app blocker
+        </Text>
       </View>
 
-      <View style={{alignItems: 'center', justifyContent:'center', postion:'absolute', top:'60%'}}>
+      <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          top: '55%',
+        }}>
         <AppleSocialButton
           buttonStyle={AppleButton.Style.WHITE}
           buttonType={AppleButton.Type.SIGN_IN}
@@ -127,7 +185,81 @@ const LoginScreen = ({navigation, route}) => {
             });
           }}
         />
+        <TouchableOpacity onPressIn={toggleLogin}>
+          <Text
+            style={{
+              color: 'grey',
+              fontSize: 12,
+              paddingTop: 8,
+            }}>
+            login with email
+          </Text>
+        </TouchableOpacity>
       </View>
+
+      <Modal transparent={true} visible={showLogin}>
+        <BlurView style={{flex: 1}} blurType="light" blurAmount={5}>
+          <View
+            // eslint-disable-next-line react-native/no-inline-styles
+            style={{
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginHorizontal: 'auto',
+              paddingTop: '20%',
+            }}>
+            <TextInput
+              autoCapitalize="none"
+              placeholder=" email"
+              placeholderTextColor="grey"
+              onChangeText={em => (email.current = em)}
+            />
+            <TextInput
+              style={{paddingTop: 3}}
+              autoCapitalize="none"
+              secureTextEntry={true}
+              placeholder=" password"
+              placeholderTextColor="grey"
+              onChangeText={pass => (password.current = pass)}
+            />
+            {/* <Text style={{
+              color: 'grey',
+              fontSize: 12,
+              paddingTop: 25,
+            }}> </Text> */}
+          </View>
+
+          <View style={{paddingBottom: '80%'}}>
+            
+            <Button
+              title="Login"
+              onPress={() =>
+                onEmailButtonPress(email.current, password.current).then(
+                  user => {
+                    loginHandler(user, route);
+                    toggleLogin();
+                  },
+                )
+              }
+            />
+            <TouchableOpacity
+              style={{
+                paddingLeft: 30,
+                position: 'absolute',
+                bottom: 300,
+              }}
+              onPress={toggleLogin}>
+              <Image
+                source={require('../assets/icons8-back-50.png')}
+                style={{
+                  width: 30,
+                  height: 30,
+                }}
+              />
+            </TouchableOpacity>
+          </View>
+        </BlurView>
+      </Modal>
     </View>
   );
 };

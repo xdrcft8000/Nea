@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* NeaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NeaTests.m */; };
+		0971C1FC0F054BC1AD5A0A0C /* PrintClearly-GGP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE977F0FAF1C45B49CE2A24B /* PrintClearly-GGP.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -16,6 +17,7 @@
 		63C56003143246D4B74B8B6F /* Cuprum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1B9C2B6D2B94499ACF38BC0 /* Cuprum-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9F561D6B15BC4454A6F88344 /* Pods_Nea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D863DE6F42469AFD80A360 /* Pods_Nea.framework */; };
+		A7CF4AEFAD8940CDAF734B1F /* MercusuarThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3512BE0A8E408B877333FD /* MercusuarThin.ttf */; };
 		D8247C733A9C361FC2ECC932 /* Pods_Nea_NeaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A183C7ADFCE19996F3BCA4F8 /* Pods_Nea_NeaTests.framework */; };
 		EE56110529E704BA00CA5DA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE56110429E704BA00CA5DA6 /* GoogleService-Info.plist */; };
 		EE56112829F53A1000CA5DA6 /* SwiftUIButtonProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56112429F53A1000CA5DA6 /* SwiftUIButtonProxy.swift */; };
@@ -37,6 +39,7 @@
 		EE56119129F9478D00CA5DA6 /* MonitorNea.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EE56118829F9478D00CA5DA6 /* MonitorNea.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EE56119729F95AC900CA5DA6 /* BlockUnblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56117729F942EF00CA5DA6 /* BlockUnblock.swift */; };
 		EE56119829F95D3200CA5DA6 /* BlockUnblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56117729F942EF00CA5DA6 /* BlockUnblock.swift */; };
+		EEA69FD02A0FE83A000AB5D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		F9AA3D24BEDB43C288B2F4E4 /* Cuprum-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E12CE0E5646E49BCB2BD6 /* Cuprum-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +77,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		EE56114529F9136D00CA5DA6 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
@@ -135,6 +138,8 @@
 		EE56118D29F9478D00CA5DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE56118E29F9478D00CA5DA6 /* MonitorNea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonitorNea.entitlements; sourceTree = "<group>"; };
 		EE56119629F9596000CA5DA6 /* MonitorNeaDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonitorNeaDebug.entitlements; sourceTree = "<group>"; };
+		FA3512BE0A8E408B877333FD /* MercusuarThin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MercusuarThin.ttf; path = ../assets/fonts/MercusuarThin.ttf; sourceTree = "<group>"; };
+		FE977F0FAF1C45B49CE2A24B /* PrintClearly-GGP.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PrintClearly-GGP.ttf"; path = "../assets/fonts/PrintClearly-GGP.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +234,8 @@
 				7A0E12CE0E5646E49BCB2BD6 /* Cuprum-BoldItalic.ttf */,
 				25E45D80C4F547D9A5D1327B /* Cuprum-Italic.ttf */,
 				A1B9C2B6D2B94499ACF38BC0 /* Cuprum-Regular.ttf */,
+				FE977F0FAF1C45B49CE2A24B /* PrintClearly-GGP.ttf */,
+				FA3512BE0A8E408B877333FD /* MercusuarThin.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -497,6 +504,8 @@
 				F9AA3D24BEDB43C288B2F4E4 /* Cuprum-BoldItalic.ttf in Resources */,
 				14864619DB9C43619A1B99DC /* Cuprum-Italic.ttf in Resources */,
 				63C56003143246D4B74B8B6F /* Cuprum-Regular.ttf in Resources */,
+				0971C1FC0F054BC1AD5A0A0C /* PrintClearly-GGP.ttf in Resources */,
+				A7CF4AEFAD8940CDAF734B1F /* MercusuarThin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA69FD02A0FE83A000AB5D1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,9 +777,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Nea-NeaTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = W2V286C357;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -799,7 +809,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Nea-NeaTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -827,10 +836,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Nea.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Nea/Nea.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W2V286C357;
 				ENABLE_BITCODE = NO;
@@ -841,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -849,6 +859,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nea.nea;
 				PRODUCT_NAME = Nea;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nea-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -860,7 +871,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Nea.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Nea/Nea.entitlements;
@@ -873,7 +883,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1034,6 +1044,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = neaShield/neaShield.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1054,6 +1065,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.neaShield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1112,6 +1124,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = shieldConfig/shieldConfig.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1132,6 +1145,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.shieldConfig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1190,6 +1204,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = MonitorNea/MonitorNeaDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1205,11 +1220,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.MonitorNea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1245,7 +1261,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = nea.nea.MonitorNea;
 				PRODUCT_NAME = "$(TARGET_NAME)";

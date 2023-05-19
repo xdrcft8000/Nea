@@ -16,6 +16,14 @@
     {
       "path": "assets/fonts/Cuprum-Regular.ttf",
       "sha1": "075283b3021d515681e3b399e1703e61d84e3850"
+    },
+    {
+      "path": "assets/fonts/MercusuarThin.ttf",
+      "sha1": "b32f02dc551c2fa669b92b3ca7e3f4be08d62b33"
+    },
+    {
+      "path": "assets/fonts/PrintClearly-GGP.ttf",
+      "sha1": "8e3f6117cff1121aa07c8d6c4b5c3de85e9a50b0"
     }
   ]
 }

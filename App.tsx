@@ -1,23 +1,16 @@
 /* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 
-import React, {useEffect, useState, useRef} from 'react';
-import {useColorScheme} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import React, {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import { firebase } from '@react-native-firebase/database';
 import LoginScreen from './screens/LoginScreen';
-import HomeScreen from './screens/HomeScreen';
 import SetupScreen from './screens/SetupScreen';
+import HomeScreen2 from './screens/HomeScreen2';
 import { readAsyncStore, storeAsyncData } from './storageFunctions';
+
 
 GoogleSignin.configure({
   webClientId:
@@ -30,56 +23,56 @@ const Stack = createNativeStackNavigator();
 const unsubscribe = async (): Promise<FirebaseAuthTypes.User | null> => {
   return new Promise((resolve) => {
     const unsub = firebase.auth().onAuthStateChanged((firebaseUser) => {
-      unsub();
+      if (!firebaseUser){
+        resolve(null);
+      } else {
       resolve(firebaseUser);
+      }
     });
   });
 };
 
-
-function App(): JSX.Element {
-
-  readAsyncStore('usedAppBefore').then((usedAppBefore) => {
+const checkPrevUse = async ():Promise<number> =>{
+  let returnValue = 0;
+  await readAsyncStore('usedAppBefore').then((usedAppBefore) => {
     if (!usedAppBefore){
       firebase.auth().signOut();
       storeAsyncData([['usedAppBefore',true]]);
+      returnValue =  1;
     }
   });
+  return returnValue;
+};
 
-  const isDarkMode = useColorScheme() === 'dark';
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+function App(): JSX.Element {
+
+
+  // const isDarkMode = useColorScheme() === 'dark';
+  // const backgroundStyle = {
+  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  // };
 
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
 
   useEffect(() => {
-    // Check if user is logged in
-    unsubscribe().then((newUser =>{
-      if (newUser) {
-  
-        readAsyncStore('setupComplete').then((complete)=>{
-        if (complete === '1'){
-          setHasCompletedSetup(true);
+    checkPrevUse().then((used)=>{
+      if (used === 0){
+      // Check if user is logged in
+      unsubscribe().then((newUser =>{
+        if (newUser) {
+          loginHandler(newUser);
+          } else {
+          setUser(null);
         }
-        setUser(newUser);
-      });} else {
+      }));
+      } else {
         setUser(null);
       }
-    }));
-
+  });
   }, []);
 
-  // const  unsubscribe = firebase.auth().onAuthStateChanged((firebaseUser) => {
-  //   if (firebaseUser) {
-  //     console.log('Swaggity')
-  //     currentUser  = firebaseUser;
-  //   } else {
-  //     setUser(null);
-  //   }
-  //   return unsubscribe;
-  // });
+
 
   const loginHandler = (newUser : FirebaseAuthTypes.User) => {
     readAsyncStore('setupComplete').then((complete)=>{
@@ -108,7 +101,7 @@ function App(): JSX.Element {
           hasCompletedSetup ? (
             <Stack.Screen
               name="Home"
-              component={HomeScreen}
+              component={HomeScreen2}
               options={{ headerShown: false }}
               initialParams = {{setupComplete:completeUnHandler
               ,logout:loginUnhandler}}
@@ -118,7 +111,7 @@ function App(): JSX.Element {
               name="Setup"
               component={SetupScreen}
               options={{ headerShown: false }}
-              initialParams = {{setupComplete:completeHandler}}
+              initialParams = {{setupComplete:completeHandler, logout:loginUnhandler}}
             />
           )
         ) : (
